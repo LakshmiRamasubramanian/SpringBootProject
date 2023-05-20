@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Started</title>
+</head>
+<body>
+ <h3>Thymeleaf Started</h3>
+ 
+ <form th:action="@{/saveProduct}" th:object="${product}"  method="post">
+ <input type="text" th:field="*{name}"/>
+ <input type="text" th:field="*{price}"/>
+ <input type="submit" value="save"/>
+  <input type="reset" value="Reset"/>
+ </form>
+
+</body>
+</html>
